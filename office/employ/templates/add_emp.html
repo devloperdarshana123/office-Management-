@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee to the List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container">
+    <h2 class="text-center">Add Employee to the List</h2>
+    <hr>
+    <form action="{% url 'add_emp' %}" method="post">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label for="First_name">First Name</label>
+            <input type="text" id="First_name" name="first_name" class="form-control" placeholder="Enter first name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Last_name">Last Name</label>
+            <input type="text" id="Last_name" name="last_name" class="form-control" placeholder="Enter last name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Salary">Salary</label>
+            <input type="number" id="Salary" name="salary" class="form-control" placeholder="Enter salary" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Role">Role</label>
+            <input type="text" id="Role" name="role" class="form-control" placeholder="Enter role" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="dept">Department</label>
+            <input type="text" id="dept" name="department" class="form-control" placeholder="Enter department" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Phone">Phone Number</label>
+            <input type="number" id="Phone" name="phone" class="form-control" placeholder="Enter phone number" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Bonus">Bonus</label>
+            <input type="number" id="Bonus" name="bonus" class="form-control" placeholder="Enter bonus" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

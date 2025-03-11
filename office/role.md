@@ -1,0 +1,2 @@
+
+<QuerySet [<Role: Python Developer>, <Role: C ++ developer>, <Role: Ruby Developer>, <Role: JS Developer>, <Role: Fontend Developer>, <Role: Backend Developer>, <Role: Django Developer>, <Role: Data Scientist>]>

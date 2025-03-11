@@ -1,0 +1,8 @@
+<h2>Filtered Employees</h2>
+<ul>
+    {% for emp in emps %}
+        <li>{{ emp.first_name }} {{ emp.last_name }} - {{ emp.dept.name }} - {{ emp.role.name }}</li>
+    {% empty %}
+        <li>No employees found.</li>
+    {% endfor %}
+</ul>
