@@ -15,36 +15,36 @@
     <hr>
     <form action="{% url 'filter_emp' %}" method="post">
 {% csrf_token %}
-        {% csrf_token %}
+
         
         <div class="mb-3">
             <label for="name">First Name/Last Name </label><br>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Enter name" value="{{ request.POST.name }}"> <br>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter name" value="{{ name }}"> <br>
         </div>
 
         <div class="mb-3">
             <label for="Role">Role</label>
-            <input type="text" id="Role" name="role" class="form-control" placeholder="Enter role" value="{{ request.POST.role }}">
+            <input type="text" id="Role" name="role" class="form-control" placeholder="Enter role" value="{{ role }}">
         </div>
 
         <div class="mb-3">
             <label for="dept">Department</label>
-            <input type="text" id="dept" name="dept" class="form-control" placeholder="Enter department" value="{{ request.POST.dept }}">
+            <input type="text" id="dept" name="dept" class="form-control" placeholder="Enter department" value="{{ dept }}">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    {% comment %} <h2>Filtered Employees</h2>
-    <ul>
-        {% if emps %}
-            {% for emp in emps %}
-                <li>{{ emp.first_name }} {{ emp.last_name }} - {{ emp.dept.name }} - {{ emp.role.name }}</li>
-            {% endfor %}
-        {% else %}
-            <li>No employees found.</li>
-        {% endif %}
-    </ul> {% endcomment %}
+    <h2>Filtered Employees</h2>
+<ul>
+    {% if emps %}
+        {% for emp in emps %}
+            <li>{{ emp.first_name }} {{ emp.last_name }} - {{ emp.dept.name }} - {{ emp.role.name }}</li>
+        {% endfor %}
+    {% else %}
+        <li>No employees found.</li>
+    {% endif %}
+</ul>
 
 </div>
 
